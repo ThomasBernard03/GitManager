@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GitManager.Core.Services
+﻿namespace GitManager.Core.Services
 {
-    public class ConsoleService
+    public static class ConsoleService
     {
-        private static int DisplaySelect(List<string> options)
+        public static int DisplaySelect(List<string> options)
         {
             var selectedItem = 0;
             bool done = false;
@@ -48,5 +42,18 @@ namespace GitManager.Core.Services
             return selectedItem;
         }
 
+        public static void WriteLine(string content, ConsoleColor consoleColor = ConsoleColor.White)
+        {
+            Console.ForegroundColor = consoleColor;
+            Console.WriteLine(content);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        public static void Write(string content, ConsoleColor consoleColor = ConsoleColor.White)
+        {
+            Console.ForegroundColor = consoleColor;
+            Console.Write(content);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }

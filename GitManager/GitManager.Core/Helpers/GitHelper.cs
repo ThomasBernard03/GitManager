@@ -12,9 +12,20 @@ namespace GitManager.Core.Helpers
             _terminalService = new TerminalService();
         }
 
-        public GitConfiguration GetConfiguration(GitConfigurationScope scope = GitConfigurationScope.Global)
+        public GitConfiguration GetConfiguration(GitConfigurationScope scope = GitConfigurationScope.global)
         {
-            throw new NotImplementedException();
+            var commandResult = TerminalService.Shell.Term($"git config --{scope} user.name & git config --{scope} user.email");
+
+            var gitNameAndMail = commandResult.stdout.Split("\n").Take(2);
+
+            var result = new GitConfiguration()
+            {
+                Name = gitNameAndMail.FirstOrDefault(),
+                Email = gitNameAndMail.LastOrDefault(),
+                Scope = scope,
+            };
+
+            return result;
         }
     }
 }

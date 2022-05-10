@@ -8,6 +8,6 @@ namespace GitManager.Core.Helpers.Interfaces
         /// Get the git configuation
         /// </summary>
         /// <returns>The git configuration</returns>
-        GitConfiguration GetConfiguration(GitConfigurationScope scope = GitConfigurationScope.Global);
+        GitConfiguration GetConfiguration(GitConfigurationScope scope = GitConfigurationScope.global);
     }
 }

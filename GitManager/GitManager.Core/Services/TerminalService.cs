@@ -5,22 +5,22 @@ namespace GitManager.Core.Services
 {
     public class TerminalService
     {
-        public static IBridgeSystem _bridgeSystem { get; set; }
-        public static ShellConfigurator _shell { get; set; }
+        public static IBridgeSystem BridgeSystem { get; set; }
+        public static ShellConfigurator Shell { get; set; }
 
         public TerminalService()
         {
             switch (OS.GetCurrent())
             {
                 case "win":
-                    _bridgeSystem = BridgeSystem.Bat;
+                    BridgeSystem = ToolBox.Bridge.BridgeSystem.Bat;
                     break;
                 case "mac":
                 case "gnu":
-                    _bridgeSystem = BridgeSystem.Bash;
+                    BridgeSystem = ToolBox.Bridge.BridgeSystem.Bash;
                     break;
             }
-            _shell = new ShellConfigurator(_bridgeSystem);
+            Shell = new ShellConfigurator(BridgeSystem);
         }
     }
 }

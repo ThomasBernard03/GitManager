@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using GitManager.Core.Services;
+
+namespace GitManager
+{
+    class Program
+    {
+        async static Task Main(string[] args)
+        {
+        }
+    }
+}

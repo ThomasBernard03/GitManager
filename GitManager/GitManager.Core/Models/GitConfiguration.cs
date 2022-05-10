@@ -10,6 +10,7 @@
     public enum GitConfigurationScope
     {
         local,
-        global
+        global,
+        unset
     }
 }

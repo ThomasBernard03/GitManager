@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="dein.ToolBox" Version="1.9.0" />
-    <PackageReference Include="ThomasBernard.CsharpTools" Version="1.3.5" />
+    <PackageReference Include="ThomasBernard.CsharpTools" Version="1.3.7" />
   </ItemGroup>
 
 </Project>

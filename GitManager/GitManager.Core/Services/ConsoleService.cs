@@ -55,5 +55,10 @@
             Console.Write(content);
             Console.ForegroundColor = ConsoleColor.White;
         }
+
+        public static void Clear()
+        {
+            Console.Clear();
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace GitManager
         private static void DisplayOptions()
         {
             var options = new List<string>() { "Change global configuration", "Change local configuration", "Add new configuration", "Delete configuration", "Exit" };
-            Console.CursorTop = 20;
+            Console.CursorTop = 15;
             var selectedItem = DisplaySelect(options);
 
             switch (selectedItem)

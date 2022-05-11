@@ -27,5 +27,12 @@ namespace GitManager.Core.Helpers
 
             return result;
         }
+
+        public void SetConfiguration(GitConfiguration gitConfiguration, GitConfigurationScope scope)
+        {
+            //var command = $"git config --{scope} user.name \"{gitConfiguration.Name}\"";
+            var command = $"git config --{scope} user.name \"{gitConfiguration.Name}\" --replace-all & git config --{scope} user.email {gitConfiguration.Email} --replace-all";
+            var commandResult = TerminalService.Shell.Term(command);
+        }
     }
 }

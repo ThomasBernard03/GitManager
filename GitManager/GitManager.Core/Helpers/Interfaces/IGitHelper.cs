@@ -9,5 +9,12 @@ namespace GitManager.Core.Helpers.Interfaces
         /// </summary>
         /// <returns>The git configuration</returns>
         GitConfiguration GetConfiguration(GitConfigurationScope scope = GitConfigurationScope.global);
+
+        /// <summary>
+        /// Set the git configuration
+        /// </summary>
+        /// <param name="gitConfiguration">The git configutation</param>
+        /// <param name="scope">The scope to apply</param>
+        void SetConfiguration(GitConfiguration gitConfiguration, GitConfigurationScope scope);
     }
 }

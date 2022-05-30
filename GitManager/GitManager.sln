@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitManager.Core", "GitManager.Core\GitManager.Core.csproj", "{E851509E-B792-4076-ACEF-325D7D9CEBF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitManager.Core", "GitManager.Core\GitManager.Core.csproj", "{E851509E-B792-4076-ACEF-325D7D9CEBF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitManager", "GitManager\GitManager.csproj", "{0889E94A-82A7-4107-A82D-13786BA745AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{E851509E-B792-4076-ACEF-325D7D9CEBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E851509E-B792-4076-ACEF-325D7D9CEBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E851509E-B792-4076-ACEF-325D7D9CEBF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0889E94A-82A7-4107-A82D-13786BA745AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0889E94A-82A7-4107-A82D-13786BA745AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0889E94A-82A7-4107-A82D-13786BA745AC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0889E94A-82A7-4107-A82D-13786BA745AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0889E94A-82A7-4107-A82D-13786BA745AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0889E94A-82A7-4107-A82D-13786BA745AC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

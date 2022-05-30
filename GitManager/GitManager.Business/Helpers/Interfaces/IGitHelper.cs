@@ -10,6 +10,7 @@ namespace GitManager.Business.Helpers.Interfaces
         /// <returns>The git configuration</returns>
         GitConfiguration GetConfiguration(GitConfigurationScope scope = GitConfigurationScope.global);
 
+
         /// <summary>
         /// Set the git configuration
         /// </summary>
@@ -22,5 +23,11 @@ namespace GitManager.Business.Helpers.Interfaces
         /// </summary>
         /// <returns>All saved Configuration</returns>
         IEnumerable<GitConfiguration> GetSavedConfigurations();
+
+        /// <summary>
+        /// Delete all configurations and replace it by gitConfigurations
+        /// </summary>
+        /// <param name="gitConfigurations">New configurations</param>
+        void SaveConfigurations(IEnumerable<GitConfiguration> gitConfigurations);
     }
 }

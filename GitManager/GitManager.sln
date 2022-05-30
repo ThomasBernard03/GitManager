@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitManager.Core", "GitManag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitManager", "GitManager\GitManager.csproj", "{0889E94A-82A7-4107-A82D-13786BA745AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitManager.Business", "GitManager.Business\GitManager.Business.csproj", "{9980CE0B-CDC5-480C-9653-7912BA024BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitManager.Models", "GitManager.Models\GitManager.Models.csproj", "{1F05F2B7-722D-4323-9755-2E19757FD861}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,14 @@ Global
 		{0889E94A-82A7-4107-A82D-13786BA745AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0889E94A-82A7-4107-A82D-13786BA745AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0889E94A-82A7-4107-A82D-13786BA745AC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9980CE0B-CDC5-480C-9653-7912BA024BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9980CE0B-CDC5-480C-9653-7912BA024BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9980CE0B-CDC5-480C-9653-7912BA024BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9980CE0B-CDC5-480C-9653-7912BA024BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F05F2B7-722D-4323-9755-2E19757FD861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F05F2B7-722D-4323-9755-2E19757FD861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F05F2B7-722D-4323-9755-2E19757FD861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F05F2B7-722D-4323-9755-2E19757FD861}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

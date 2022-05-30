@@ -1,7 +1,7 @@
 ﻿using ToolBox.Bridge;
 using ToolBox.Platform;
 
-namespace GitManager.Core.Services
+namespace GitManager.Business
 {
     public class TerminalService
     {

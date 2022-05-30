@@ -1,8 +1,8 @@
 ﻿using CsharpTools.Services;
-using GitManager.Core.Models;
+using GitManager.Models;
 using Newtonsoft.Json;
 
-namespace GitManager.Core.Services
+namespace GitManager.Business
 {
     public class GitConfigurationService
     {

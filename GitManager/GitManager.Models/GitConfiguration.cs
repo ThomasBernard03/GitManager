@@ -1,4 +1,4 @@
-﻿namespace GitManager.Core.Models
+﻿namespace GitManager.Models
 {
     public class GitConfiguration
     {

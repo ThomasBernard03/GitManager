@@ -1,10 +1,7 @@
-﻿using CsharpTools.Services;
-using CsharpTools.Services.Interfaces;
+﻿using GitManager.Business;
+using GitManager.Business.Helpers.Interfaces;
 using GitManager.Core.Helpers;
-using GitManager.Core.Helpers.Interfaces;
-using GitManager.Core.Models;
-using GitManager.Core.Services;
-using Newtonsoft.Json;
+using GitManager.Models;
 using static GitManager.Core.Services.ConsoleService;
 
 namespace GitManager

@@ -1,15 +1,21 @@
-﻿using GitManager.Core.Helpers.Interfaces;
-using GitManager.Core.Models;
-using GitManager.Core.Services;
+﻿using CsharpTools.Services;
+using CsharpTools.Services.Interfaces;
+using GitManager.Business.Helpers.Interfaces;
+using GitManager.Models;
 
-namespace GitManager.Core.Helpers
+namespace GitManager.Business.Helpers
 {
     public class GitHelper : IGitHelper
     {
-        private readonly TerminalService _terminalService;
-        public GitHelper()
+        private readonly IFileService _fileService;
+        private readonly ILogService _logService;
+
+        public GitHelper(IFileService fileService, ILogService logService)
         {
-            _terminalService = new TerminalService();
+            _fileService = fileService;
+            _logService = logService;
+            _logService.DirectoryPath = $"{AppContext.BaseDirectory}\\Logs";
+            new TerminalService();
         }
 
         public GitConfiguration GetConfiguration(GitConfigurationScope scope = GitConfigurationScope.global)
@@ -25,6 +31,8 @@ namespace GitManager.Core.Helpers
                 Scope = scope,
             };
 
+            _logService.Info($"User get {scope} configuration (returned {result.Email})");
+
             return result;
         }
 
@@ -33,6 +41,14 @@ namespace GitManager.Core.Helpers
             //var command = $"git config --{scope} user.name \"{gitConfiguration.Name}\"";
             var command = $"git config --{scope} user.name \"{gitConfiguration.Name}\" --replace-all & git config --{scope} user.email {gitConfiguration.Email} --replace-all";
             var commandResult = TerminalService.Shell.Term(command);
+            _logService.Info($"User set new {scope} configuration ({gitConfiguration.Email})");
+        }
+
+
+        public IEnumerable<GitConfiguration> GetSavedConfigurations()
+        {
+            _logService.Info("User get all saved configurations");
+            return new List<GitConfiguration>();
         }
     }
 }

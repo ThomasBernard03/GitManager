@@ -1,6 +1,6 @@
-﻿using GitManager.Core.Models;
+﻿using GitManager.Models;
 
-namespace GitManager.Core.Helpers.Interfaces
+namespace GitManager.Business.Helpers.Interfaces
 {
     public interface IGitHelper
     {
@@ -16,5 +16,11 @@ namespace GitManager.Core.Helpers.Interfaces
         /// <param name="gitConfiguration">The git configutation</param>
         /// <param name="scope">The scope to apply</param>
         void SetConfiguration(GitConfiguration gitConfiguration, GitConfigurationScope scope);
+
+        /// <summary>
+        /// Get all saved configurations saved in configurations.json
+        /// </summary>
+        /// <returns>All saved Configuration</returns>
+        IEnumerable<GitConfiguration> GetSavedConfigurations();
     }
 }
